@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Queries\Interface\ConsultaTotaisPorPessoa\" />
-    <Folder Include="Queries\Interface\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GestaoGastoResidencial.Domain\GestaoGastoResidencial.Domain.csproj" />
   </ItemGroup>
 
