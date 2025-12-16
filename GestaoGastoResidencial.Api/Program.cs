@@ -18,7 +18,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BancoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
+// Adicionando injeção de dependência para repositórios e casos de uso
 builder.Services.AddScoped<IPessoaRepository, PessoaRepository>();
 builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddScoped<ITransacaoRepository, TransacaoRepository>();
@@ -27,8 +27,8 @@ builder.Services.AddScoped<IPessoaUseCases, PessoaUseCases>();
 builder.Services.AddScoped<ICategoriaUseCases, CategoriaUseCases>();
 builder.Services.AddScoped<ITransacaoUseCases, TransacaoUseCases>();
 
+// Configuração do CORS para permitir requisições do frontend
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
