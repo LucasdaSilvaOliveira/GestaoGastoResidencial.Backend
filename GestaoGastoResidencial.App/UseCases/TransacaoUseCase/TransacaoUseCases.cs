@@ -50,7 +50,7 @@ namespace GestaoGastoResidencial.App.UseCases.TransacaoUseCase
             return transacoes.Select(t => new TransacaoDTO
             {
                 Id = t.Id,
-                Descrição = t.Descrição,
+                Descricao = t.Descrição,
                 Valor = t.Valor,
                 Tipo = t.Tipo,
                 CategoriaId = t.CategoriaId,
@@ -67,7 +67,7 @@ namespace GestaoGastoResidencial.App.UseCases.TransacaoUseCase
             return new TransacaoDTO
             {
                 Id = transacao.Id,
-                Descrição = transacao.Descrição,
+                Descricao = transacao.Descrição,
                 Valor = transacao.Valor,
                 Tipo = transacao.Tipo,
                 CategoriaId = transacao.CategoriaId,
@@ -81,7 +81,7 @@ namespace GestaoGastoResidencial.App.UseCases.TransacaoUseCase
             if (transacao == null)
                 throw new KeyNotFoundException("Transação não encontrada");
 
-            transacao.Descrição = dto.Descrição;
+            transacao.Descrição = dto.Descricao;
             transacao.Valor = dto.Valor;
             transacao.Tipo = dto.Tipo;
             transacao.CategoriaId = dto.CategoriaId;

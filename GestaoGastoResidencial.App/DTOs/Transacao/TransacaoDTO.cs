@@ -13,7 +13,7 @@ namespace GestaoGastoResidencial.App.DTOs.Transacao
     public class TransacaoDTO
     {
         public int Id { get; set; }
-        public string Descrição { get; set; }
+        public string Descricao { get; set; }
         public decimal Valor { get; set; }
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public TipoTransacao Tipo { get; set; }
